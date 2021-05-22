@@ -134,3 +134,90 @@ h2 {
 .btn:active{
     background-color: var(--secondary-color);
 }
+
+
+/* Animations */
+#box1, #box3, #hollowCircle, #box5, #box4, #redCircle, #boxCircle{
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#box1{
+    animation: move 4s linear infinite;
+}
+
+#box3{
+    animation: up-down 5s linear infinite;
+}
+
+#hollowCircle{
+    animation: up-down 2s linear infinite;
+}
+
+#box5, #boxCircle{
+    animation: left-right 3s linear infinite;
+}
+
+#box4{
+    animation: rotates 3s linear infinite;
+}
+
+#redCircle{
+    animation: left-right-flower 4s linear infinite;
+    transform-origin: 36px 36px;
+}
+
+@keyframes left-right-flower {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotates {
+    from{
+        transform: rotate(0deg);
+    }   
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes left-right {
+    0%{
+        transform: translateX(0px);
+    }
+
+    50%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes up-down {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes move{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
