@@ -67,7 +67,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   width: 30%;
-  height: 100%;
+  height: calc(100% - 10px);
+  margin-top: 10px;
 }
 
 .form {
@@ -113,6 +114,7 @@ h2 {
   border-bottom: 1px solid black;
   font-size: 15px;
   color: rgb(59, 59, 59);
+  background-color: white;
 }
 
 .btn{
@@ -256,6 +258,9 @@ h2 {
     }
     .formDiv{
         width: 90%;
+    }
+    .left{
+        margin-left: 15px;
     }
     .right{
         margin: 0;
