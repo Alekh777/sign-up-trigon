@@ -4,6 +4,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html, body{
+    height: 100%;
+}
+
 :root{
     --primary-color: #00CACA;
 }
@@ -11,6 +15,7 @@
 a{
     text-decoration: none;
     transition: color 0.2s;
+    color: black;
     margin: 0 20px;
 }
 
@@ -24,6 +29,7 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: lightblue;
 }
 
 .logo{
@@ -36,4 +42,38 @@ a:hover{
 
 .right{
     margin-right: 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100% - 80px);
+    margin: 0 100px;
+    padding-right: 50px;
+}
+
+.signup{
+    width: 45%;
+}
+
+.formDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+}
+
+.form{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+}
+
+h3{
+    text-align: center;
+    margin: 20px;
 }
