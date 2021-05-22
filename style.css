@@ -114,10 +114,6 @@ h2 {
   color: rgb(59, 59, 59);
 }
 
-select option:hover {
-  background-color: yellow;
-}
-
 .btn{
     padding: 13px;
     width: 150px;
