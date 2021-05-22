@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --primary-color: #00CACA;
+}
+
+a{
+    text-decoration: none;
+    transition: color 0.2s;
+    margin: 0 20px;
+}
+
+a:hover{
+    color: var(--primary-color);
+}
+
+.navbar{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 40px;
+}
+
+.left{
+    margin-left: 30px;
+}
+
+.right{
+    margin-right: 30px;
+}
