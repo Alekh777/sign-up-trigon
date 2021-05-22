@@ -11,6 +11,7 @@ body {
 
 :root {
   --primary-color: #00caca;
+  --secondary-color: #00f5f5;
 }
 
 a {
@@ -121,7 +122,19 @@ select option:hover {
     padding: 13px;
     width: 150px;
     background-color: white;
-    border: solid var(--primary-color) 3px;
+    border: solid var(--primary-color) 2px;
     border-radius: 20px;
     font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn:active{
+    background-color: var(--secondary-color);
 }
