@@ -249,12 +249,14 @@ h2 {
         flex-direction: column;
         margin: 0px;
         padding: 0;
+        height: auto;
     }
     .divider{
         display: none;
     }
     .signup{
         width: 90%;
+        height: 25%;
     }
     .formDiv{
         width: 90%;
@@ -269,6 +271,9 @@ h2 {
         padding: 0px;
     }
     .btn{
-        margin-top: 10px;
+        margin-top: 50px;
+    }
+    .txt, .select{
+        margin: 15px 0px;
     }
 }
