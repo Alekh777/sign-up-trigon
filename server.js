@@ -23,6 +23,8 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/signup', (req, res)=>{
+    if(req.session.userId)
+        return res.redirect('/profile')
     res.render('signup.hbs')
 })
 
@@ -45,7 +47,6 @@ app.get('/login', (req, res)=>{
 
 app.post('/login', async (req, res)=>{
     const User = await Users.findOne({where: {email: req.body.email}})
-    console.log('no such user')
     if(!User){
         return res.status(404).render('login.hbs', {error: 'Email is incorrect'})
     }
@@ -62,8 +63,8 @@ app.get('/profile', async (req, res)=>{
     if(!req.session.userId){
         return res.redirect('/login')
     }
-    const user = await Users.findByPk(req.session.userId)
-    res.render('profile.hbs', {user})
+    const User = await Users.findByPk(req.session.userId)
+    res.render('profile.hbs', {User})
 })
 
 app.get('/logout', (req, res)=>{
