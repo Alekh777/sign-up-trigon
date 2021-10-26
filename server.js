@@ -58,6 +58,18 @@ app.post('/login', async (req, res)=>{
     res.redirect('/profile')
 })
 
+app.get('/profile', async (req, res)=>{
+    if(!req.session.userId){
+        return res.redirect('/login')
+    }
+    const user = await Users.findByPk(req.session.userId)
+    res.render('profile.hbs', {user})
+})
+
+app.get('/logout', (req, res)=>{
+    req.session.userId = null
+    res.redirect('/login')
+})
 
 db.sync()
     .then(()=>{
