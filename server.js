@@ -16,6 +16,16 @@ app.set('view engine', 'hbs')
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
+app.get('/', (req, res)=>{
+    if(!req.session.userId)
+        return res.redirect('/signup')
+    res.redirect('/profile')
+})
+
+app.get('/signup', (req, res)=>{
+    res.render('signup.hbs')
+})
+
 db.sync()
     .then(()=>{
         app.listen(PORT, ()=>{
