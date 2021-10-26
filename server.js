@@ -27,7 +27,7 @@ app.get('/signup', (req, res)=>{
 })
 
 app.post('/signup', async (req, res)=>{
-    const user = await Users.create({
+    const User = await Users.create({
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
@@ -36,6 +36,28 @@ app.post('/signup', async (req, res)=>{
 
     res.status(201).send(`User ${req.body.name} created, <a href="/login">login</a> to go to your profile`)
 })
+
+app.get('/login', (req, res)=>{
+    if(!req.session.userId)
+        return res.render('login.hbs')
+    res.redirect('/profile')
+})
+
+app.post('/login', async (req, res)=>{
+    const User = await Users.findOne({where: {email: req.body.email}})
+    console.log('no such user')
+    if(!User){
+        return res.status(404).render('login.hbs', {error: 'Email is incorrect'})
+    }
+    
+    if(User.password !== req.body.password){
+        return res.status(404).render('login.hbs', {error: 'Incorrect password'})
+    }
+
+    req.session.userId = User.id;
+    res.redirect('/profile')
+})
+
 
 db.sync()
     .then(()=>{
