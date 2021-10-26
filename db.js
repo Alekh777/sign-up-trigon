@@ -6,13 +6,14 @@ const db = new Sequelize('user_auth', 'myuser', 'mypass', {
 })
 
 const Users = db.define('user', {
-    username: {
+    name: {
         type: Sequelize.DataTypes.STRING(30),
-        unique: true,
         allowNull: false
     },
     email: {
-        type: Sequelize.DataTypes.STRING(100)
+        type: Sequelize.DataTypes.STRING(100),
+        unique: true,
+        allowNull: false
     },
     password: {
         type: Sequelize.DataTypes.STRING,
