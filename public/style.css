@@ -71,6 +71,38 @@ a:hover {
   margin-top: 10px;
 }
 
+.form-heading{
+    display: inline-block;
+    margin: 0 40px;
+}
+
+.form a{
+    padding: 0;
+}
+
+.heading-signup{
+    position: relative;
+    cursor: pointer;
+}
+
+.heading-signup::after{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+.heading-main::after{
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.heading-secondary::after{
+    height: 1px;
+    background-color: black;
+}
+
 .form {
   display: flex;
   justify-content: space-around;
