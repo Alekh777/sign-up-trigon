@@ -1,19 +1,31 @@
 .details{
-    width: 22%;
     height: 60%;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
 }
 
+.details-div{
+    width: 60%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details-div div{
+    display: inline-flex;
+}
+
 .site-details{
     border-right: 1px solid black;
     color: gray;
+    width: 20%;
 }
 
 .db-details{
     font-weight: 500;
-    width: 40%;
+    width: 55%;
 }
 
 .profile{
@@ -25,11 +37,11 @@
 }
 
 .db-details{
-    padding-left: 190px;
+    padding-left: 130px;
 }
 
 .site-details{
-    padding-left: 140px;
+    padding-left: 50px;
 }
 
 .container{
@@ -88,5 +100,46 @@
     }
     to{
         transform: translateX(-20px);
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 1270px){
+    .site-details{
+        padding-left: 0;
+    }
+}
+@media (max-width: 880px){
+    .details{
+        padding-left: 0;
+        display: inline-flex;
+        height: 100%;
+    }
+    .main-heading{
+        font-size: 25px;
+        text-align: center;
+    }
+    .heading{
+        margin-top: 10px;
+        height: auto;
+    }
+    .details-div{
+        width: 90%;
+        height: 35%;
+        margin: 30px 0;
+    }
+    .site-details{
+        width: 23%;
+    }
+    .db-details{
+        width: 67%;
+        padding-left: 20px;
+    }
+    .profile{
+        width: 100%;
+        height: 70%;
+    }
+    .container{
+        justify-content: space-around;
     }
 }

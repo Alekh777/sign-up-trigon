@@ -278,6 +278,12 @@ h2 {
 }
 
 @media (max-width: 700px){
+    .form-heading{
+        margin: 0px;
+    }
+    .form a{
+        margin: 0 25px;
+    }
     .container{
         flex-direction: column;
         margin: 0px;
