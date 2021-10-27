@@ -36,7 +36,9 @@ app.post('/signup', async (req, res)=>{
         contact: req.body.contact
     })
 
-    res.status(201).send(`User ${req.body.name} created, <a href="/login">login</a> to go to your profile`)
+    res.status(201).send(`<div style="height: calc(100vh - 16px); display: flex; justify-content: center; align-item: center; font-size: 30px;">
+    <p>User ${req.body.name} created, <a href="/login">login</a> to go to your profile</p>
+    </div>`)
 })
 
 app.get('/login', (req, res)=>{

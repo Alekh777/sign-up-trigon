@@ -1,13 +1,13 @@
 # Sign Up and Login Page
 A User authentication website. It has following features:
- - Stores the user data in MySQL database using sequelize as ORM.
+ - Stores the user data in MySQL database using sequelize as ORM. (Sqlite for Heroku deployment)
  - The login information is stored in client's browser as cookies so client doesn't need to login again after closing the tab/window.
  - Only the id of the user is stored on client's browser, no passwords or username is stored (for security reasons).
  - It also features animated SVG.
 
 ## Packages required
 ```shell
-npm i express mysql2 sequelize express-session hbs
+npm i express mysql2 sequelize express-session hbs sqlite3
 ```
 
 ## Technologies used
